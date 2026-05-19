@@ -6,7 +6,6 @@ const wss = new WebSocketServer({ port: 8080 });
 
 wss.on("connection", (socket) => {
   console.log("client connected");
-
   socket.send("hello client");
 
   socket.on("message", (message) => {
